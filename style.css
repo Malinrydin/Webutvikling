@@ -1,0 +1,201 @@
+body {
+    font-family: Arial, sans-serif, 'Helvetica';
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+        "header header header header"
+        "aside main main main"
+        "footer footer footer footer";
+    grid-gap: 10px;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+
+/*Header og navbar*/
+
+/*Header*/
+
+header {
+    grid-area: header;
+    background-image: url('head.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/*Navigasjonsbar*/
+
+ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 2px;
+    justify-items: center;
+    padding: 0px 0px 0px 10px;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0.384);
+}
+
+nav ul li:hover {
+    list-style: none;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0.712);
+}
+
+.navlink {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+
+/*Overskrifter*/
+
+h1 {
+    text-align: center;
+    color: rgb(255, 255, 255);
+    padding: 20px 20px 20px 10px;
+    margin: 0px;
+}
+
+h2 {
+    color: rgb(23, 46, 28);
+}
+
+h3 {
+    color: rgb(23, 46, 28);
+}
+
+
+/*main område med artikler*/
+
+main {
+    grid-area: main;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+/*KUN de tre artiklene --- forsiden*/
+
+.forsideArticle {
+    grid-area: main;
+    width: 32%;
+    text-align: center;
+    background-color: rgb(231, 245, 234);
+}
+
+
+/*Paragrafbilder i artiklene --- forsiden*/
+
+.pImg {
+    text-align: center;
+}
+
+
+/*Paragraf i artiklene --- forsiden*/
+
+.forsideP {
+    text-align: left;
+    padding: 0px 10px;
+    color: rgb(23, 46, 28);
+}
+
+
+/*Sidebar (aside)*/
+
+aside {
+    grid-area: aside;
+    padding: 0px 0px 0px 10px;
+    background-color: rgb(118, 165, 128);
+}
+
+
+/*Videoen i sidebaren*/
+
+iframe {
+    border: none;
+    margin-right: 8px;
+}
+
+
+/*Aside seksjon*/
+
+section {
+    padding: 10px;
+}
+
+
+/*Aside, seksjon, link*/
+
+section a {
+    font-size: 13px;
+    text-decoration: none;
+    color: rgb(23, 46, 28);
+}
+
+
+/*Når man holder over linkene i seksjon*/
+
+section a:hover {
+    font-size: 14px;
+    text-decoration: underline;
+}
+
+/*Footer*/
+
+footer {
+    grid-area: footer;
+    background-image: url('head.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 90%;
+    width: 100%;
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+
+/*Standalone artikler*/
+
+.standaloneBody {
+    font-family: Arial, sans-serif, 'Helvetica';
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+        "header header header header"
+        "main main aside aside"
+        "footer footer footer footer";
+    grid-gap: 10px;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.standaloneMain {
+    display: grid;
+    grid-area: main;
+    background-color: rgb(231, 245, 234);
+}
+
+.standaloneOverskrift {
+    padding: 0px 0px 0px 10px;
+    color: rgb(23, 46, 28);
+}
+
+.standaloneP {
+    padding: 0px 0px 0px 10px;
+    color: rgb (23, 46, 28);
+}
+
+.standaloneAside {
+    display: grid;
+    grid-area: aside;
+    background-color: rgb(231, 245, 234);
+}
